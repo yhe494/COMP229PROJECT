@@ -50,14 +50,28 @@ export default function Home(){
 const classes = useStyles()
 return (
 <Card className={classes.card}>
-   
-  <Typography variant="h6" className={classes.title}>Home Page</Typography>
+  <Typography variant="h6" className={classes.title}>Meow Munchies</Typography>
+    <h2>Welcome to Meow Munchies!</h2>
+    <p>Explore our wide range of high-quality pet food products for your furry friends.</p>
+
 <CardMedia className={classes.media}
 image={unicornbikeImg} title="Unicorn Bicycle"/>
 <CardContent>
-<Typography variant="body2" component="p"> 
-Welcome to the MERN Skeleton home page.
-</Typography> 
+<div class="product-card">
+            <img src="pet_food1.jpg" alt="Pet Food 1"></img>
+            <h3>Premium Cat Food</h3>
+            <p>Healthy and delicious cat food for your feline friend.</p>
+            <p>$15.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="pet_food2.jpg" alt="Pet Food 2"></img>
+            <h3>Nutritious Dog Food</h3>
+            <p>Specially formulated dog food to keep your dog happy and healthy.</p>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
 </CardContent>
 </Card> 
 )
