@@ -1,35 +1,48 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="root">Hello World</div>
-      <!--<script type="module">
-      import RefreshRuntime from "http://localhost:3000/@react-refresh";
-      RefreshRuntime.injectIntoGlobalHook(window);
-      window.$RefreshReg$ = () => {};
-      window.$RefreshSig$ = () => (type) => type;
-      window.__vite_plugin_react_preamble_installed__ = true;
-      </script>
-      <script type="module" src="http://localhost:3000/src/main.jsx"></script>-->
-    </body>
-    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Meow Munchies</title>
+</head>
+<body>
+    <header>
+        <h1>Meow Munchies</h1>
+    </header>
 
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to Meow Munchies!</h2>
+        <p>Explore our wide range of high-quality pet food products for your furry friends.</p>
+
+        <div class="product-card">
+            <img src="pet_food1.jpg" alt="Pet Food 1">
+            <h3>Premium Cat Food</h3>
+            <p>Healthy and delicious cat food for your feline friend.</p>
+            <p>$15.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="pet_food2.jpg" alt="Pet Food 2">
+            <h3>Nutritious Dog Food</h3>
+            <p>Specially formulated dog food to keep your dog happy and healthy.</p>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Pet Food Store. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
