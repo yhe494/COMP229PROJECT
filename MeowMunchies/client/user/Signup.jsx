@@ -72,8 +72,9 @@ export default function Signup() {
     return (<div>
       <Card className={classes.card}>
         <CardContent>
+          <img src='./assets/images/logo.jpg' alt='Meow Munchies Logo' width='200' height='200'></img>
           <Typography variant="h6" className={classes.title}>
-            Sign Up
+            Welcome to Meow Munchies Pet Food Delivery!
           </Typography>
           <TextField id="name" label="Name" className={classes.textField} value={values.name} onChange={handleChange('name')} margin="normal"/><br/>
           <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"/><br/>
@@ -85,7 +86,7 @@ export default function Signup() {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
+          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Sign Up</Button>
         </CardActions>
       </Card>
       <Dialog open={values.open} disableBackdropClick={true}>

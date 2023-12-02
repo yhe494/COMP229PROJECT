@@ -80,8 +80,9 @@ export default function Signin(props) {
   return (
       <Card className={classes.card}>
         <CardContent>
+        <img src='./assets/images/logo.jpg' alt='Meow Munchies Logo' width='200' height='200'></img>
           <Typography variant="h5" className={classes.title}>
-            Sign In
+          Welcome to Meow Munchies Pet Food Delivery!
           </Typography>
           <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"/><br/>
           <TextField id="password" type="password" label="Password" className={classes.textField} value={values.password} onChange={handleChange('password')} margin="normal"/>
@@ -93,7 +94,7 @@ export default function Signin(props) {
           }
         </CardContent>
         <CardActions>
-        <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
+        <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Sign In</Button>
         </CardActions>
       </Card>
     )
