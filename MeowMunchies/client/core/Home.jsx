@@ -28,8 +28,13 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import unicornbikeImg from './../assets/images/unicornbikeImg.jpg';
-   
+import acana from './../assets/images/acana.png';
+import logo from './../assets/images/logo.jpg';
+import Grid from '@material-ui/core/Grid';
+import Orijen from './../assets/images/Orijen.png';
+import Orijen2 from './../assets/images/Orijen2.png';
+import royal from './../assets/images/royal.jpg';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -44,36 +49,59 @@ const useStyles = makeStyles(theme => ({
   media: {
     minHeight: 400,
   },
+  gridMedia:{
+    minHeight:300,
+    minWidth:200,
+    backgroundSize: 'contain'
+  },
+  title:{
+    padding: theme.spacing(3, 2.5, 2),
+    color: theme.palette.openTitle,
+    fontWeight: 'bold',
+  },
+
 }));
 
 export default function Home(){ 
 const classes = useStyles()
 return (
+<div>
 <Card className={classes.card}>
-  <Typography variant="h6" className={classes.title}>Meow Munchies</Typography>
-    <h2>Welcome to Meow Munchies!</h2>
-    <p>Explore our wide range of high-quality pet food products for your furry friends.</p>
 
 <CardMedia className={classes.media}
-image={unicornbikeImg} title="Unicorn Bicycle"/>
-<CardContent>
-<div class="product-card">
-            <img src="pet_food1.jpg" alt="Pet Food 1"></img>
-            <h3>Premium Cat Food</h3>
-            <p>Healthy and delicious cat food for your feline friend.</p>
-            <p>$15.99</p>
-            <button>Add to Cart</button>
-        </div>
+image={logo} title="logo"/>
 
-        <div class="product-card">
-            <img src="pet_food2.jpg" alt="Pet Food 2"></img>
-            <h3>Nutritious Dog Food</h3>
-            <p>Specially formulated dog food to keep your dog happy and healthy.</p>
-            <p>$19.99</p>
-            <button>Add to Cart</button>
-        </div>
-</CardContent>
-</Card> 
+</Card>
+
+<Container>
+<Typography variant="h5" className={classes.title}>
+  Hot Products
+</Typography>
+
+<Grid container direction="row" spacing={4}>
+        <Grid item xs={3}>
+          <Card className={classes.card}>
+            <CardMedia className={classes.gridMedia} image={acana} title="acana"/>
+          </Card> 
+        </Grid>
+        <Grid item xs={3}>
+          <Card className={classes.card}>
+            <CardMedia className={classes.gridMedia} image={Orijen} title="orijen"/>
+          </Card> 
+          </Grid>
+          <Grid item xs={3}>
+          <Card className={classes.card}>
+            <CardMedia className={classes.gridMedia} image={Orijen2} title="orijen2"/>
+          </Card> 
+        </Grid>
+        <Grid item xs={3}>
+          <Card className={classes.card}>
+            <CardMedia className={classes.gridMedia} image={royal} title="royal"/>
+          </Card> 
+        </Grid>
+      </Grid>
+      </Container>
+</div>
 )
 }
 

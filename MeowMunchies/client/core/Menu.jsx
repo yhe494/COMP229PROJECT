@@ -10,6 +10,9 @@ import {Link, withRouter} from 'react-router-dom'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 import cart from './../cart/cart-helper'
+import { makeStyles } from '@material-ui/core/styles';
+
+
 
 const isActive = (history, path) => {
   if (history.location.pathname == path)
@@ -27,7 +30,7 @@ const Menu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        MERN Marketplace
+        Meow Munchies
       </Typography>
       <div>
         <Link to="/">
