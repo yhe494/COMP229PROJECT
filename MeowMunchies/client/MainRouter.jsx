@@ -21,10 +21,25 @@ import StripeConnect from './user/StripeConnect'
 import ShopOrders from './order/ShopOrders'
 import Order from './order/Order'
 import Search from './product/Search'
+import { listCategories } from './product/api-product'
 
 const MainRouter = () => {
+  const [categories, setCategories] = React.useState([])
+
+  React.useEffect(() => {
+    listCategories().then(data => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        setCategories(data);
+      }
+    });
+  }, []);
+
   return (<div>
+    
       <Menu/>
+      <Search categories={categories} />{Search}
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/users" component={Users}/>
@@ -37,8 +52,6 @@ const MainRouter = () => {
         <Route path="/product/:productId" component={Product}/>
         <Route path="/shops/all" component={Shops}/>
         <Route path="/shops/:shopId" component={Shop}/>
-        <Route path="/search" component={Search}/>
-        
 
         <Route path="/order/:orderId" component={Order}/>
         <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders}/>
@@ -51,7 +64,9 @@ const MainRouter = () => {
 
         <Route path="/seller/stripe/connect" component={StripeConnect}/>
       </Switch>
+      
     </div>)
 }
 
-export default MainRouter
+export default MainRouter;
+

@@ -44,6 +44,11 @@ const update = async (params, credentials, product) => {
 }
 
 const remove = async (params, credentials) => {
+  if (!params.shopId || !params.productId || !credentials.t) {
+    console.error('Invalid parameters or credentials');
+    return;
+  }
+
   try {
     let response = await fetch('/api/product/' + params.shopId +'/'+params.productId, {
       method: 'DELETE',
@@ -58,7 +63,6 @@ const remove = async (params, credentials) => {
     console.log(err)
   }
 }
-
 const listByShop = async (params, signal) => {
   try {
     let response = await fetch('/api/products/by/'+params.shopId, {
