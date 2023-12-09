@@ -7,7 +7,6 @@ import Icon from '@material-ui/core/Icon'
 import auth from './../auth/auth-helper'
 import cart from './cart-helper.js'
 import PlaceOrder from './PlaceOrder'
-import {Elements} from 'react-stripe-elements'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -50,7 +49,7 @@ export default function Checkout (){
       products: cart.getCart(),
       customer_name: user.name,
       customer_email:user.email,
-      delivery_address: { street: '', city: '', state: '', zipcode: '', country:''}
+      delivery_address: { street: '', city: '', province: '', postalcode: '', country:''}
     },
     error: ''
   })
@@ -79,8 +78,8 @@ export default function Checkout (){
         </Typography>
         <TextField id="street" label="Street Address" className={classes.streetField} value={values.checkoutDetails.delivery_address.street} onChange={handleAddressChange('street')} margin="normal"/><br/>
         <TextField id="city" label="City" className={classes.addressField} value={values.checkoutDetails.delivery_address.city} onChange={handleAddressChange('city')} margin="normal"/>
-        <TextField id="state" label="State" className={classes.addressField} value={values.checkoutDetails.delivery_address.state} onChange={handleAddressChange('state')} margin="normal"/><br/>
-        <TextField id="zipcode" label="Zip Code" className={classes.addressField} value={values.checkoutDetails.delivery_address.zipcode} onChange={handleAddressChange('zipcode')} margin="normal"/>
+        <TextField id="state" label="Province" className={classes.addressField} value={values.checkoutDetails.delivery_address.province} onChange={handleAddressChange('province')} margin="normal"/><br/>
+        <TextField id="zipcode" label="Postal Code" className={classes.addressField} value={values.checkoutDetails.delivery_address.postalcode} onChange={handleAddressChange('postalcode')} margin="normal"/>
         <TextField id="country" label="Country" className={classes.addressField} value={values.checkoutDetails.delivery_address.country} onChange={handleAddressChange('country')} margin="normal"/>
         <br/> {
             values.error && (<Typography component="p" color="error">
@@ -88,9 +87,7 @@ export default function Checkout (){
                 {values.error}</Typography>)
           }
         <div>
-          <Elements>
             <PlaceOrder checkoutDetails={values.checkoutDetails} />
-          </Elements>
         </div>
       </Card>)
 }
