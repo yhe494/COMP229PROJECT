@@ -1,9 +1,9 @@
 {
-  "name": "mern_skeleton",
+  "name": "MeowMunchies",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
-  "author": "Blessing",
+  "main": "server.js",
+  "author": "Group4",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.5",
