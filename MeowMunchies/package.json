@@ -2,7 +2,7 @@
   "name": "MeowMunchies",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "author": "Group4",
   "license": "MIT",
   "devDependencies": {
