@@ -2587,17 +2587,10 @@ mongodb@6.2.0:
     bson "^6.2.0"
     mongodb-connection-string-url "^2.6.0"
 
-<<<<<<< HEAD
 mongoose@^8.0.3:
   version "8.0.3"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.0.3.tgz#f3708ba0f40b6dec8f5f1a5d40abd69a80207114"
+  resolved "https://registry.npmjs.org/mongoose/-/mongoose-8.0.3.tgz"
   integrity sha512-LJRT0yP4TW14HT4r2RkxqyvoTylMSzWpl5QOeVHTnRggCLQSpkoBdgbUtORFq/mSL2o9cLCPJz+6uzFj25qbHw==
-=======
-mongoose@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-8.0.2.tgz"
-  integrity sha512-Vsi9GzTXjdBVzheT1HZOZ2jHNzzR9Xwb5OyLz/FvDEAhlwrRnXnuqJf0QHINUOQSm7aoyvnPks0q85HJkd6yDw==
->>>>>>> 579c28b15557276b9a998ce5b598d8cae6025ad0
   dependencies:
     bson "^6.2.0"
     kareem "2.5.1"
