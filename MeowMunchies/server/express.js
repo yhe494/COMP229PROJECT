@@ -13,6 +13,7 @@ import orderRoutes from './routes/order.routes.js'
 const app = express()
 const CURRENT_WORKING_DIR = process.cwd()
 
+app.use(express.static('client'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/', userRoutes)
