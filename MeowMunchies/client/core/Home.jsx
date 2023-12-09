@@ -41,6 +41,7 @@ import naturelogic from "./../assets/images/NaturesLogic.jpg";
 import vetdiet from "./../assets/images/Vetdiet.jpg";
 import earthborn from "./../assets/images/Earthborn.jpg";
 import Container from "@material-ui/core/Container";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -48,10 +49,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     marginTop: theme.spacing(5),
   },
-  title: {
-    padding: theme.spacing(3, 2.5, 2),
-    color: theme.palette.openTitle,
-  },
+
   media: {
     minHeight: 400,
   },
@@ -82,6 +80,7 @@ export default function Home() {
 
         <Grid container direction="row" spacing={4}>
           <Grid item xs={3}>
+            <Link to = "product/6573b77e4ebd427646d7a3e3">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -89,8 +88,10 @@ export default function Home() {
                 title="acana"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7de4ebd427646d7a471">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -98,8 +99,10 @@ export default function Home() {
                 title="orijen"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7ef4ebd427646d7a493">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -107,8 +110,10 @@ export default function Home() {
                 title="orijen2"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+          <Link to = "product/6573b7ff4ebd427646d7a4b1">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -116,8 +121,10 @@ export default function Home() {
                 title="royal"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7984ebd427646d7a401">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -125,8 +132,10 @@ export default function Home() {
                 title="Fancy Feast"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7a54ebd427646d7a415">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -134,8 +143,10 @@ export default function Home() {
                 title="Hill's Science Diet"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7ba4ebd427646d7a43f">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -143,8 +154,10 @@ export default function Home() {
                 title="Merrick"
               />
             </Card>
+            </Link>
           </Grid>
           <Grid item xs={3}>
+            <Link to = "product/6573b7cb4ebd427646d7a457">
             <Card className={classes.card}>
               <CardMedia
                 className={classes.gridMedia}
@@ -152,25 +165,10 @@ export default function Home() {
                 title="Nature's Logic"
               />
             </Card>
+            </Link>
           </Grid>
-          <Grid item xs={3}>
-            <Card className={classes.card}>
-              <CardMedia
-                className={classes.gridMedia}
-                image={vetdiet}
-                title="Vet Diet"
-              />
-            </Card>
-          </Grid>
-          <Grid item xs={3}>
-            <Card className={classes.card}>
-              <CardMedia
-                className={classes.gridMedia}
-                image={earthborn}
-                title="Earth born"
-              />
-            </Card>
-          </Grid>
+
+
         </Grid>
       </Container>
     </div>

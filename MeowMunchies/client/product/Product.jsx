@@ -38,7 +38,8 @@ const useStyles = makeStyles(theme => ({
     height: 200,
     display: 'inline-block',
     width: '50%',
-    marginLeft: '24px'
+    marginLeft: '24px',
+    backgroundSize: "contain",
   },
   icon: {
     verticalAlign: 'sub'
@@ -125,9 +126,7 @@ export default function Product ({match}) {
                     {product.description}<br/>
                     <span className={classes.price}>$ {product.price}</span>
                     <Link to={'/shops/'+product.shop._id} className={classes.link}>
-                      <span>
-                        <Icon className={classes.icon}>shopping_basket</Icon> {product.shop.name}
-                      </span>
+
                     </Link>
                   </Typography>
 

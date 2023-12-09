@@ -7,6 +7,7 @@ import Icon from '@material-ui/core/Icon';
 import auth from './../auth/auth-helper';
 import cart from './cart-helper.js';
 import { Redirect } from 'react-router-dom';
+import { CardElement, injectStripe } from 'react-stripe-elements';
 
 const useStyles = makeStyles(theme => ({
   subheading: {
@@ -38,10 +39,20 @@ const PlaceOrder = (props) => {
   const placeOrder = () => {
     // Replace the following line with the actual function that communicates with your server to create an order
     const createOrderOnServer = async () => {
-      // Example: const data = await api.createOrder(props.checkoutDetails);
-      // Replace 'api.createOrder' with your actual function
-      const data = { _id: 'some-order-id' }; // Replace with actual data from the server
-
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + auth.isAuthenticated().token,
+        },
+        body: JSON.stringify(props.checkoutDetails),
+      });
+    
+      if (!response.ok) {
+        throw new Error('Error creating order');
+      }
+    
+      const data = await response.json();
       return data;
     };
 
